@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #read file
-df=pd.read_csv("D:\\Projects\\ML\\glioma+grading+clinical+and+mutation\\dataset\\TCGA_GBM_LGG_Mutations_all.csv")
+df=pd.read_csv("../glioma+grading+clinical+and+mutation/dataset/TCGA_GBM_LGG_Mutations_all.csv")
 
 #drop irrelevant features
 relevant_df=df.drop(['Case_ID','Project','Primary_Diagnosis','Age_at_diagnosis','Race'],axis=1)
@@ -38,5 +38,5 @@ relevant_df['FAT4']=relevant_df['FAT4'].map({'NOT_MUTATED':0,'MUTATED':1})
 relevant_df['PDGFRA']=relevant_df['PDGFRA'].map({'NOT_MUTATED':0,'MUTATED':1})
 
 #exporting data
-relevant_df.to_csv('D:\\Projects\\ML\\glioma+grading+clinical+and+mutation\\dataset\\relevant_df')
+relevant_df.to_csv('../glioma+grading+clinical+and+mutation/dataset/relevant_df')
 

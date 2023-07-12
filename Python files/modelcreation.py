@@ -1,5 +1,5 @@
 import pandas as pd
-relevant_df=pd.read_csv('D:\\Projects\\ML\\glioma+grading+clinical+and+mutation\\dataset\\relevant_df')
+relevant_df=pd.read_csv('../glioma+grading+clinical+and+mutation/dataset/relevant_df')
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(relevant_df,relevant_df.Grade,test_size=0.25,train_size=0.75, random_state=None, shuffle=True, stratify=None)
 X_test=X_test.drop('Grade',axis=1)
